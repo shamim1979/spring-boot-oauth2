@@ -8,6 +8,7 @@
 
     <modules>
         <module>authorization-server</module>
+        <module>utility-service</module>
     </modules>
 
     <parent>

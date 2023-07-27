@@ -12,23 +12,26 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>authorization-server</artifactId>
+    <artifactId>utility-service</artifactId>
+
+    <name>utility-service</name>
+    <description>Utility service</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.lombok.version>1.18.26</project.lombok.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
     </dependencies>
 
