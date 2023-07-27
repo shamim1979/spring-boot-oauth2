@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("division")
+@RequestMapping()
 public class DivisionController {
 
-    @GetMapping
+    @GetMapping("/")
     //@PreAuthorize("hasRole('ADMIN')")
     public String division(@AuthenticationPrincipal Jwt jwt) {
         return "dhaka";
