@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>authorization</module>
+        <module>authorization-server</module>
     </modules>
 
     <parent>
