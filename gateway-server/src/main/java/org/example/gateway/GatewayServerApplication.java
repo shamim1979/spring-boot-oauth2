@@ -13,7 +13,7 @@ public class GatewayServerApplication {
         SpringApplication.run(GatewayServerApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     RouteLocator gateway(RouteLocatorBuilder rlb) {
         return rlb
                 .routes()
@@ -22,5 +22,5 @@ public class GatewayServerApplication {
                         .filters(GatewayFilterSpec::tokenRelay)
                         .uri("http://localhost:8081"))
                 .build();
-    }
+    }*/
 }

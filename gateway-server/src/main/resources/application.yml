@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: spring
+            client-id: client
+            client-secret: secret
+            scope: openid, profile, user.read
+            authorization-grant-type: authorization_code
+            redirect-uri: http://127.0.0.1:8080/login/oauth2/code/spring
+        provider:
+          spring:
+            issuer-uri: http://localhost:9000
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay=
+      routes:
+        - id: route
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/**
